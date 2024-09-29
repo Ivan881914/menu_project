@@ -16,7 +16,7 @@
 - PostgreSQL
 - Git
 
-## Установка и Настройка Проекта
+## Установка и настройка Проекта
 
 ### 1. Клонирование Репозитория
 
@@ -27,7 +27,7 @@ git clone https://github.com/Ivan881914/menu_project.git
 cd menu_project
 ```
 
-### 2. Установка Зависимостей через Composer
+### 2. Установка зависимостей через Composer
 
 Установите все необходимые зависимости с помощью Composer:
 
@@ -35,7 +35,7 @@ cd menu_project
 composer install
 ```
 
-### 3. Настройка Базы Данных PostgreSQL
+### 3. Настройка базы данных PostgreSQL
 
 1. **Создайте базу данных и пользователя**:
 
@@ -51,13 +51,12 @@ GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_db_user;
 psql -U your_db_user -d your_database_name -f sql/schema.sql
 ```
 
-### 4. Настройка Подключения к Базе Данных
+### 4. Настройка подключения к базе данных
 
 1. Откройте файл `config.php` и замените значения `'your_database_name'`, `'your_db_user'`, и `'your_db_password'` на свои реальные данные:
 
 ```php
 <?php
-// config.php
 
 return [
     'dbname' => 'your_database_name',
@@ -68,9 +67,9 @@ return [
 ];
 ```
 
-## Импорт и Экспорт Данных
+## Импорт и экспорт данных
 
-### 1. Импорт Категорий из `categories.json`
+### 1. Импорт категорий из `categories.json`
 
 Выполните импорт:
 
@@ -78,7 +77,7 @@ return [
 php src/import.php
 ```
 
-### 2. Экспорт Категорий
+### 2. Экспорт категорий
 
 - **Экспорт в `type_a.txt` (полная иерархия с URL)**:
 
@@ -94,11 +93,11 @@ php src/import.php
 
 После выполнения этих команд файлы `type_a.txt` и `type_b.txt` будут созданы в каталоге `exports/`.
 
-## Просмотр Списка Меню
+## Просмотр списка меню
 
 Чтобы посмотреть список категорий в веб-интерфейсе:
 
-### Запуск Встроенного PHP-Сервера
+### Запуск сервера
 
 ```bash
 php -S localhost:8000 -t src/
@@ -106,9 +105,10 @@ php -S localhost:8000 -t src/
 
 Откройте браузер и перейдите по адресу [http://localhost:8000/list_menu.php](http://localhost:8000/list_menu.php).
 
-## Скрипты и Команды
+## Команды
 
-- **Импорт Категорий**: `php src/import.php`
-- **Экспорт Категорий в type_a.txt**: `php src/export_a.php`
-- **Экспорт Категорий в type_b.txt**: `php src/export_b.php`
-- **Запуск Встроенного PHP-Сервера**: `php -S localhost:8000 -t src/`
+- **Перейти в нужную папку**: `cd src`
+- **Импорт категорий**: `php import.php`
+- **Экспорт категорий в type_a.txt**: `php export_a.php`
+- **Экспорт категорий в type_b.txt**: `php export_b.php`
+- **Запуск сервера**: `php -S localhost:8000`
