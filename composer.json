@@ -1,0 +1,18 @@
+{
+    "name": "su6ject/menu",
+    "description": "menu for taskt for connection",
+    "autoload": {
+        "psr-4": {
+            "Su6ject\\Menu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ivan.khvostov",
+            "email": "i.khvostov@smartdata.dev"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^4.1"
+    }
+}

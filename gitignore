@@ -1,0 +1,18 @@
+
+# зависимости
+/vendor/
+
+# кофиг
+config.php
+
+# логи и временные файлы
+*.log
+/tmp/
+/cache/
+
+# системные файлы
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
